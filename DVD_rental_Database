@@ -51,3 +51,35 @@ FROM
   address
 WHERE 
   address = "259 Ipoh Drive";
+  
+ORDER BY CHALLENGE
+
+-- Situation: We want to reward our first 10 paying customers. What are the customer ID's of the first 10 customers who created a paymet? 
+
+SELECT 
+    customer_id
+FROM 
+    payment
+ORDER BY 
+    payment_date ASC
+LIMIT 10;
+
+-- Situation: A customer wants to quickly rent a video to watch over their short lunch break. 
+              What are the titles of the 5 shortest (in length of runtime) movies?
+
+SELECT 
+    title, length
+FROM 
+    film
+ORDER BY
+    length ASC
+ LIMIT 5;
+ 
+ -- If the previous customer can watch any movie that is 50 minutes or less in runtime, how many options do they have?
+
+SELECT
+    COUNT(title)
+FROM
+    film
+WHERE 
+    length <=50;

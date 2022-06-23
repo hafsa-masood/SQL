@@ -1,0 +1,52 @@
+** This is a project I completed in the Udemy course "The Complete SQL Bootcamp 2021: Go from Zero to Hero". ** 
+
+## SELECT CHALLENGE
+
+-- Situation: We want to send out a promotional email to our existing customers. 
+
+SELECT
+  first_name, last_name, email
+FROM 
+  customer;
+
+-- Situation: We have an Australian visitor who isn't familiar with MPAA movie ratings (e.g. PG, PG-13, R, etc.). 
+              We want to know the types of ratings we have in our database.
+             
+SELECT 
+  DISTINCT(rating)
+FROM 
+  film;
+
+## WHERE CHALLENGE
+
+-- Situation: A customer forgot their wallet at our store! We need to look up their email to inform them. 
+              What is the email for the customer with the name Nancy Thomas?
+
+SELECT
+  email
+FROM 
+  customer
+WHERE 
+  first_name = "Nancy" 
+  AND 
+  last_name = "Thomas";
+  
+-- Situation: A customer wants to know what the movie "Outlaw Hanky" is about. Could you give them the description for the movie? 
+
+SELECT
+  description 
+FROM 
+  film
+WHERE
+  title = "Outlaw Hanky";
+
+-- Situation: A customer is late on their movie return, and we've mailed them a letter to their address at "259 Ipoh Drive". 
+              We should also call them on the phone to let them know.
+              Can you get the phone number for the customer who lives at "259" Ipoh Drive"?
+
+SELECT 
+  phone 
+FROM 
+  address
+WHERE 
+  address = "259 Ipoh Drive";

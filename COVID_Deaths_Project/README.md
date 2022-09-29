@@ -1,4 +1,4 @@
-###Visualizing COVID 
+### Visualizing COVID 
 
 COVID impacted the entire world, and changed the way we went about operating in our daily lives. I was curious to see what impact COVID had on a world wide scale. Having a passion for healthcare, I wanted to make sense of some of the numbers. 
 
